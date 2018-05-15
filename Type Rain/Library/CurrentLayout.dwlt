@@ -294,9 +294,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.112291, y: -4.9679117, z: 5}
+    m_Target: {x: 2.10143, y: 0.020543292, z: 4.998047}
     speed: 2
-    m_Value: {x: -1.112291, y: -4.9679117, z: 5}
+    m_Value: {x: 2.10143, y: 0.020543292, z: 4.998047}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -323,9 +323,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 58.951683
+    m_Target: 15.471328
     speed: 2
-    m_Value: 58.951683
+    m_Value: 15.471328
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -364,9 +364,9 @@ MonoBehaviour:
     height: 382
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f4270000
-    m_LastClickedID: 10228
-    m_ExpandedIDs: 9ee1ffff90ebffff1afcffff0000000074260000ea270000
+    m_SelectedIDs: 64260000
+    m_LastClickedID: 9828
+    m_ExpandedIDs: 1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -529,18 +529,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/_Scenes
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Scenes
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/hiramatsuyoshitaka/Documents/Unity/TypeRain/Type Rain
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 16260000
-    m_LastClickedID: 9750
+    m_SelectedIDs: 02260000
+    m_LastClickedID: 9730
     m_ExpandedIDs: 000000000226000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
