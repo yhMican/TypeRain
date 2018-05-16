@@ -30,4 +30,5 @@ public class Cloud : MonoBehaviour {
 		GameObject rainDrop = Instantiate (raindrop, transform.position, Quaternion.identity);
 		rainDrop.GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, -1.0f, 0);
 	}
+
 }
