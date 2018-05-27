@@ -15,6 +15,8 @@ public class Cloud : MonoBehaviour {
 	public GameObject raindrop;
 	public float RainsPerSeconds;
 
+	public GameObject parent;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -29,11 +31,11 @@ public class Cloud : MonoBehaviour {
 	}
 
 	void Rain () {
-		
 		GameObject rainDrop = Instantiate (raindrop, 
-			new Vector3(Random.Range(- width / 100f, width/100f), transform.position.y, transform.position.z), 
+			new Vector3(Random.Range(- width/100f, width/100f), transform.position.y, transform.position.z), 
 			Quaternion.identity);
 		rainDrop.GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, -2.0f, 0);
+		rainDrop.transform.parent = parent.transform;
 	}
 
 }
