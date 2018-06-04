@@ -6,16 +6,13 @@ using UnityEngine.UI;
 public class Cloud : MonoBehaviour {
 
 	private int width = Screen.width;
-
 	private string[] test = {"テスト", "こんにちは", "菓子"};
-	private string[] testAlpha = { "tesuto", "konnnitiha", "kasi" };
-	private Text UIJ;
-	private Text UIR;
-
-	public GameObject raindrop;
-	public float RainsPerSeconds;
+	private string[] testE = { "tesuto", "konnnitiha", "kasi" };
 
 	public GameObject parent;
+	public GameObject raindrop;
+	public float RainsPerSecond;
+
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +21,7 @@ public class Cloud : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float probability = Time.deltaTime * RainsPerSeconds;
+		float probability = Time.deltaTime * RainsPerSecond;
 		if (Random.value < probability) {
 			Rain ();
 		}
@@ -36,6 +33,7 @@ public class Cloud : MonoBehaviour {
 			Quaternion.identity);
 		rainDrop.GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, -2.0f, 0);
 		rainDrop.transform.parent = parent.transform;
+		//rainDrop.setQuestion (test [0], testE [0]);
 	}
 
 }
