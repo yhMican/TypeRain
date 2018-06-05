@@ -31,7 +31,7 @@ public class Cloud : MonoBehaviour {
 			new Vector3(Random.Range(- width/100f, width/100f), transform.position.y, transform.position.z), 
 			Quaternion.identity);
 		raindrop.GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, -2.0f, 0);
-		raindrop.transform.parent = transform;
+		raindrop.transform.parent = transform;  // set the parent of raindrop instance to the cloud object
 	}
 
 }
