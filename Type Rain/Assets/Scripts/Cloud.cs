@@ -9,8 +9,7 @@ public class Cloud : MonoBehaviour {
 	private string[] test = {"テスト", "こんにちは", "菓子"};
 	private string[] testE = { "tesuto", "konnnitiha", "kasi" };
 
-	public GameObject parent;
-	public GameObject raindrop;
+	public GameObject raindropPrefab;
 	public float RainsPerSecond;
 
 
@@ -28,12 +27,11 @@ public class Cloud : MonoBehaviour {
 	}
 
 	void Rain () {
-		GameObject rainDrop = Instantiate (raindrop, 
+		GameObject raindrop = Instantiate (raindropPrefab, 
 			new Vector3(Random.Range(- width/100f, width/100f), transform.position.y, transform.position.z), 
 			Quaternion.identity);
-		rainDrop.GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, -2.0f, 0);
-		rainDrop.transform.parent = parent.transform;
-		//rainDrop.setQuestion (test [0], testE [0]);
+		raindrop.GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, -2.0f, 0);
+		raindrop.transform.parent = transform;
 	}
 
 }
