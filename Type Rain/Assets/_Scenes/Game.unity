@@ -259,7 +259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea33d7d5bf88b4bb5b300faf9340e5dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloud: {fileID: 398601194}
   raindropPrefab: {fileID: 1190739094562544, guid: 49be7ec2b9d3944278fa73644edd4ca6,
     type: 2}
   RainsPerSecond: 1
