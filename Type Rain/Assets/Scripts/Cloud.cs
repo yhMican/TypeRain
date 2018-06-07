@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Cloud : MonoBehaviour {
 
 	private int width = Screen.width;
-	private string[] test = {"テスト", "こんにちは", "菓子"};
-	private string[] testE = { "tesuto", "konnnitiha", "kasi" };
+	private string[] test = {"あ", "テスト", "こんにちは", "菓子"};
+	private string[] testE = { "a", "tesuto", "konnnitiha", "kasi" };
 
 	public GameObject raindropPrefab;
 	public float RainsPerSecond;
@@ -32,6 +32,10 @@ public class Cloud : MonoBehaviour {
 			Quaternion.identity);
 		raindrop.GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, -2.0f, 0);
 		raindrop.transform.parent = transform;  // set the parent of raindrop instance to the cloud object
+		int randomQuestionNum = Random.Range (0, 4);
+		/*Raindrop r = raindrop.GetComponent<Raindrop>();
+		r.SetQuestion(test[randomQuestionNum], testE[randomQuestionNum]);*/
+		raindrop.GetComponent<Raindrop>().SetQuestion(test[randomQuestionNum],testE[randomQuestionNum]); // equivalent with above two lines? at least works fine
 	}
 
 }
