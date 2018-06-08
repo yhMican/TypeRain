@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Raindrop : MonoBehaviour {
-	static public int count = 0;
 
 	private string questionJ; // stores a question in Japanese
 	private string questionE; // stores a question in English
 	private Text textJ; // stores Text Component in Japanese from a raindrop object
 	private Text textE; // stores Text Component in English from a raindrop object
 	private int index; // stores position of alphabet which a player is typing
-	private bool currentTarget; // true if a raindrop object is a target
+	private bool target; // true if a raindrop object is a target
+	private int serialNum; // each raindrop object has a unique serial number, which can be reused after the object is destroyed
 
 
 	// Execution order: Awake() > SetQuestion() > Start(), for some reason..
@@ -19,12 +19,12 @@ public class Raindrop : MonoBehaviour {
 		textJ = transform.Find ("QuestionJ").GetComponent<Text> ();
 		textE = transform.Find ("QuestionE").GetComponent<Text> ();
 		index = 0;
-		currentTarget = false;
+		target = false;
 	}
 	// Update is called once per frame
 	void Update () {
 		//　キーを押しているかどうか
-		if (currentTarget
+		if (target
 			&& Input.anyKeyDown
 			&& (!Input.GetMouseButton (0) && !Input.GetMouseButton (1) && !Input.GetMouseButton (2))) {
 			//　今見ている文字とキーボードから打った文字が同じかどうか
@@ -57,5 +57,14 @@ public class Raindrop : MonoBehaviour {
 		textJ.text = questionJ;
 		questionE = e;
 		textE.text = questionE;
+	}
+	public void TurnOnTarget () {
+		target = true;
+	}
+	public void TurnOffTarget() {
+		target = false;
+	}
+	public void AllocateSerialNum(int num) {
+		serialNum = num;
 	}
 }
