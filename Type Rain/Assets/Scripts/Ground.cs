@@ -5,20 +5,15 @@ using UnityEngine;
 public class Ground : MonoBehaviour {
 
 	private LevelManager levelManager;
+	private Cloud cloud;
 
-	// Use this for initialization
-	void Start () {
-		
+	void Awake () {
+		cloud = GameObject.Find ("Cloud").GetComponent<Cloud> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	void OnTriggerEnter2D (Collider2D trigger) {
 		//levelManager = GameObject.FindObjectOfType<LevelManager> ();
 		//levelManager.LoadLevel ("Lose Screen");
+		cloud.RemoveRaindrop(trigger.gameObject);
 		Destroy(trigger.gameObject);
 	}
 
